@@ -1,0 +1,6 @@
+### Header file
+* O header file (.h) é criado para resolver o problema de chamar uma função antes da mesma ser inicializada no mesmo arquivo .c. No header se coloca as declarações das funções (`float func_teste (int k);`)
+* A declaração é uma assinatura da função, um registro do seu nome, parâmetros e tipo a ser retornado. Pode colocar as declarações no começo do arquivo (usar include é equivalente a copiar todas as funções para o começo do código) ou fazer o header file. 
+* Para usar o header file, basta criar um arquivo .h e colocar as declarações das funções nele, e por fim utilizar `#include “aux.h”` no arquivo que quer usar as funções. 
+* Outra função do .h é para quando tem que usar um código (small tool??) em outro e não ter que ficar copiando para o mesmo arquivo. É criado um .h para o código que contém as funções que vão ser usadas no .c principal (não esquece de dar include desse .h nos dois arquivos). No terminal, roda gcc main.c aux.c -o arquivo_nome.
+* Usar a ferramenta make para ajudar na recompilação.
